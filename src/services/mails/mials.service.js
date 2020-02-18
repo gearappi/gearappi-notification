@@ -1,5 +1,4 @@
-var express = require('express');
-var mail = require('../../models/mails/index');
+const mail = require('../../models/mails/index');
 
 module.exports = {
   async sendCurrentMail(params){

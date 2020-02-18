@@ -2,8 +2,7 @@
 const express = require('express');
 const app = express();
 const createError = require('http-errors');
-const axios = require('axios');
-var indexRouter = require('./src/routes/index');
+const indexRouter = require('./src/routes/index');
 require('dotenv').config()
 
 app.use(express.json());
