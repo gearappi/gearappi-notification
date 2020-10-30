@@ -1,17 +1,17 @@
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
 
-const USER = process.env.EMAIL_FROM;
-const PASS = process.env.EMAIL_PASS;
-const MAIL_TO = process.env.EMAIL_TO;
+const USER = "admin@vulcanicawater.com";
+const PASS = "Qwertyu1";
+const MAIL_TO = "sayansara@mail.ru";
 
 module.exports = {
     async sendMail(params){
         var html_mes = "Message from site а \n ";
         html_mes += params.name ? "Name: " + params.name + '\n' : '';
-        html_mes += params.phone ? "Phone�: " + params.phone + '\n' : '';
+        html_mes += params.phone ? "Phone: " + params.phone + '\n' : '';
         html_mes += params.email ? "Email: " + params.email + '\n' : '';
-        html_mes += params.theme ? "Themeа: " + params.theme + '\n' : '';
+        html_mes += params.theme ? "Theme: " + params.theme + '\n' : '';
         html_mes += params.msg ? "Message: " + params.msg + '\n' : '';
         try{
             const transporter = nodemailer.createTransport({
